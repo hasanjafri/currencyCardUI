@@ -1,0 +1,30 @@
+<div class="pt-card">
+  <div>
+    <button mat-button-raised class="tradeTypeBtn" [style.background-color]="_model.tradeDirection == 'BUY' ? 'green' : 'red'" (click)='onTradeTypeClick()'>{{_model.tradeDirection}}</button>
+    <button mat-button-raised class="currencyBtn" (click)="onCurrencyClick()">{{_model.tradeCurrency}}</button>
+  </div>
+  <mat-card class="tile">
+    <div class="top-price">
+      <span>{{_model.buyLeftPrice}}</span>
+    </div>
+    <div>
+      <span class="buy-middle-price">{{_model.buyMidPrice}}</span><br>
+      <span class="trade-desc">{{_model.buyTradeDesc}}</span>
+    </div>
+    <div class="top-price">
+      <span>{{_model.buyRightPrice}}</span>
+    </div>
+  </mat-card>
+  <mat-card class="tile">
+    <div class="top-price">
+      <span>{{_model.sellLeftPrice}}</span>
+    </div>
+    <div>
+      <span class="sell-middle-price">{{_model.sellMidPrice}}</span><br>
+        <span class="trade-desc">{{_model.sellTradeDesc}}</span>
+    </div>
+    <div class="top-price">
+      <span>{{_model.sellRightPrice}}</span>
+    </div>
+  </mat-card>
+</div>

@@ -1,0 +1,5 @@
+<mat-select class="accountDropdown" [value]='accountsData[0].name' (selectionChange)='onChange($event.value)'>
+  <mat-option *ngFor='let account of accountsData' [value]='account.name'>
+    {{account.name}}
+  </mat-option>
+</mat-select>
